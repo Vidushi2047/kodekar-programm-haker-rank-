@@ -1,0 +1,46 @@
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+char* readline();
+char** split_string(char*);
+
+// Complete the catAndMouse function below.
+
+// Please either make the string static or allocate on the heap. For example,
+// static char str[] = "hello world";
+//  str;
+//
+// OR
+//
+// char* str = "hello world";
+// return str;
+//
+
+int main()
+{
+  int q,x,y,z,p=0,r=0;
+    scanf("%d",&q);
+    // for(i=0;i<n;i++)
+  while(q--)
+  {
+      scanf("%d %d %d",&x,&y,&z);
+      p=abs(x-z);
+      r=abs(y-z);
+  
+    if(p==r)
+        printf("Mouse C");
+    else if(p<r)
+        printf("Cat A");
+    else
+        printf("Cat B");
+      printf("\n");
+  }
+    
+}
