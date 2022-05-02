@@ -1,0 +1,49 @@
+#include <assert.h>
+#include <ctype.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+char* readline();
+char* ltrim(char*);
+char* rtrim(char*);
+
+int parse_int(char*);
+
+/*
+ * Complete the 'findDigits' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts INTEGER n as parameter.
+ */
+
+int main()
+{
+   int t,n,num,r;
+    scanf("%d",&t);
+   
+    while(t--)
+    { 
+        scanf("%d",&n);
+        num=n;
+          int p=0;
+       while(n>0)
+       { 
+         
+        r=n%10;
+           // printf("%d ",r);
+        if(r!=0 && num%r==0)
+            p++;
+             n=n/10;
+       }
+           printf("%d\n",p);
+        // printf("%d\n",num);
+    }
+   
+    
+}
