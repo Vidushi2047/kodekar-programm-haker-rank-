@@ -1,0 +1,51 @@
+#include <assert.h>
+#include <ctype.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+char* readline();
+char* ltrim(char*);
+char* rtrim(char*);
+char** split_string(char*);
+
+int parse_int(char*);
+
+/*
+ * Complete the 'divisibleSumPairs' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts following parameters:
+ *  1. INTEGER n
+ *  2. INTEGER k
+ *  3. INTEGER_ARRAY ar
+ */
+ 
+int main()
+{
+   int n,k,i,j,f=0,sum=0;
+    scanf("%d %d",&n,&k);
+    int a[n];
+    for(i=0;i<n;i++)
+    {
+       scanf("%d",&a[i]); 
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=i+1;j<n;j++)
+        { 
+            sum=a[i]+a[j];
+            if(sum % k==0)
+            f++;
+           
+        }
+       
+    }
+    printf("%d ",f);
+
+}
