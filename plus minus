@@ -1,0 +1,57 @@
+#include <assert.h>
+#include <ctype.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+char* readline();
+char* ltrim(char*);
+char* rtrim(char*);
+char** split_string(char*);
+
+int parse_int(char*);
+
+/*
+ * Complete the 'plusMinus' function below.
+ *
+ * The function accepts INTEGER_ARRAY arr as parameter.
+ */
+
+
+
+int main()
+{ int i,n;
+ 
+    scanf("%d",&n);
+    float a[n],p=0,q=0,r=0;
+ float d,b,c;
+    for(i=0;i<n;i++)
+    {
+        scanf("%f",&a[i]);
+    }
+   for(i=0;i<n;i++)
+   {
+ if(a[i]>0)
+ { 
+     p++;
+ }
+         if(a[i]<0)
+         {
+            q++;
+         }
+        if(a[i]==0)
+        {
+            r++;
+    }
+   }
+ d=p/n;
+ b=q/n;
+ c=r/n;
+    printf("%f\n%f\n%f\n",d,b,c);
+    
+}
