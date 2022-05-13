@@ -1,0 +1,44 @@
+#include <assert.h>
+#include <ctype.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    int s,t,a,b,m,n,h=0,H=0,i;
+    scanf("%d %d",&s,&t);
+    scanf("%d %d",&a,&b);
+     scanf("%d %d",&m,&n);
+    int A[m];
+    int O[n];
+    for(i=0;i<m;i++)
+    {
+        scanf("%d",&A[i]);
+    }
+     for(i=0;i<n;i++)
+    {
+        scanf("%d",&O[i]);
+    }
+    for(i=0;i<m;i++)
+    {
+        A[i]=A[i]+a;
+        if(A[i]>=s&&A[i]<=t)
+            h++;
+       
+    }
+      for(i=0;i<n;i++)
+    {
+        O[i]=O[i]+b;
+          if(O[i]<=t&&O[i]>=s)
+              H++;
+        
+    }
+     printf("%d\n",h);
+     printf("%d",H);
+}
